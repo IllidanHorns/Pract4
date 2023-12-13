@@ -89,7 +89,7 @@ class Admin_active():
             admin_choice = int(input())
         except:
             print("Введите данные правильно")
-            Admin_active.__admin_add_data()
+            Admin_active.__admin_add_data(None)
         match admin_choice:
             case 1:
                 new_hall = input("Новый зал - ")
