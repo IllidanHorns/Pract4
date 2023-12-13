@@ -105,7 +105,7 @@ class Client_Active:
             print("Бронь заказана.")
         except:
             print("Похоже произошла ошибка. Возможно данные, которые вы ввели совпадают с существующими. Повторите повторно.")
-            Client_Active.__start_client()
+            Client_Active.__start_client(None)
         return None
 
     def __client_enter(Change: int):
