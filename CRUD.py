@@ -34,9 +34,9 @@ class CRUD:
     @staticmethod
     def update_data_admin(column, new_data, name, password):
         if type(new_data) == str:
-            querry = f"UPDATE Admins SET '{column}' = '{new_data}' WHERE Name = '{name}' and Password = {password}"
+            querry = f"UPDATE Admins SET '{column}' = '{new_data}' WHERE Name = '{name}' and Password = '{password}'"
         else:
-            querry = f"UPDATE Admins SET {column} = {new_data} WHERE Name = '{name}' and Password = {password}"
+            querry = f"UPDATE Admins SET {column} = {new_data} WHERE Name = '{name}' and Password = '{password}'"
         CRUD.executeQuerry(querry)
 
     @staticmethod
