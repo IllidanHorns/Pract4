@@ -31,7 +31,7 @@ class Admin_active():
                 print("Похоже вы ввели данные некоректно. Попробуйте ещё раз")
             if len(Admin_active.admin.name) > 30:
                 print("Вы ввели слишком длинное имя. Попробуйте сократить и повторите попытку")
-                Admin_active.start_of_admin()
+                Admin_active.start_of_admin(None)
             elif (Admin_active.admin.phone_number // 10 ** 10) not in range(1, 10) or Admin_active.admin.phone_number // 10 ** 10 != 8:
                 print("Простите, но ввели номер телефона неправильно. Введите 11 значный номер, начинающийся с 8")
                 Admin_active.__admin_reg(None)
@@ -102,7 +102,7 @@ class Admin_active():
                 CRUD.insertData("Smoking", {"Smoking_Type": new_smoking})
             case _:
                 print("Вы ввели данные неправильно!")
-                Admin_active.__admin_add_data()
+                Admin_active.__admin_add_data(None)
 
     def __admin_change_himself_data(self, name, password):
         print("Выберите, что хотите изменить - \n"
